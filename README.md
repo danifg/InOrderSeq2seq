@@ -26,15 +26,17 @@ To train a model with the proposed deterministic attention technique, use the op
 
 ### Greedy Decoding
 
-./build/impl/constituent-parser --dynet-mem 1700 --train_file [training linearization] --test_file [test linearization] --bracketed_file test.trees --layers 2 --input_dim 64 --pos_dim 6 --bilstm_input_dim 100 --bilstm_hidden_dim 200 --attention_hidden_dim 50 --words_file ../embs/sskip.100.vectors --pretrained_dim 100 --action_dim 40 --use_pos  --unk_strategy (--fast) --model_file <BEST_MODEL>
+    ./build/impl/constituent-parser --dynet-mem 1700 --train_file [training linearization] --test_file [test linearization] --bracketed_file test.trees --layers 2 --input_dim 64 --pos_dim 6 --bilstm_input_dim 100 --bilstm_hidden_dim 200 --attention_hidden_dim 50 --words_file ../embs/sskip.100.vectors --pretrained_dim 100 --action_dim 40 --use_pos  --unk_strategy (--fast) --model_file [BEST_MODEL]
 
-### 10-beam Decoding
+### 10-Beam-search Decoding
 
-./build/impl/constituent-parser-batch --dynet-mem 1700 --train_file [training linearization] --test_file [test linearization] --bracketed_file test.tree --layers 2 --input_dim 64 --pos_dim 6 --bilstm_input_dim 100 --bilstm_hidden_dim 200 --attention_hidden_dim 50 --words_file ../embs/sskip.100.vectors --pretrained_dim 100 --action_dim 40 --use_pos  --unk_strategy  --model_file <BEST_MODEL>
+    ./build/impl/constituent-parser-batch --dynet-mem 1700 --train_file [training linearization] --test_file [test linearization] --bracketed_file test.tree --layers 2 --input_dim 64 --pos_dim 6 --bilstm_input_dim 100 --bilstm_hidden_dim 200 --attention_hidden_dim 50 --words_file ../embs/sskip.100.vectors --pretrained_dim 100 --action_dim 40 --use_pos  --unk_strategy  --model_file [BEST_MODEL]
 
 ### Citation
 
-## Acknowledgments
+To appear in ACL 2020.
+
+### Acknowledgments
 
 This work has received funding from the European Research Council (ERC), under the European Union's Horizon 2020 research and innovation programme (FASTPARSE, grant agreement No 714150), from the ANSWER-ASAP project (TIN2017-85160-C2-1-R) from MINECO, and from Xunta de Galicia (ED431B 2017/01, ED431G 2019/01).
 
