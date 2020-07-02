@@ -1,4 +1,4 @@
-This repository includes the code of the In-Order Sequence-to-Sequence Constituent Parser described in ACL paper [Enriched In-Order Linearization for Faster Sequence-to-Sequence Constituent Parsing](https://github.com/danifg/InOrderSeq2seq). The implementation is based on (https://github.com/LeonCrashCode/Encoder-Decoder-Parser) and reuses part of its code, including data preparation and evaluating scripts. 
+This repository includes the code of the In-Order Sequence-to-Sequence Constituent Parser described in ACL paper [Enriched In-Order Linearization for Faster Sequence-to-Sequence Constituent Parsing](https://www.aclweb.org/anthology/2020.acl-main.376.pdf). The implementation is based on (https://github.com/LeonCrashCode/Encoder-Decoder-Parser) and reuses part of its code, including data preparation and evaluating scripts. 
 
 This implementation requires [dynet2.0 library](https://github.com/clab/dynet) and you can find pretrained word embeddings for English and Chinese in https://github.com/LeonCrashCode/InOrderParser. 
 
@@ -22,7 +22,7 @@ To get shift-reduce linearizations:
 
     ./build/impl/constituent-parser --dynet-mem 1700 --train_file [training linearization] --dev_file [development linearization] --bracketed_file dev.trees --layers 2 --input_dim 64 --pos_dim 6 --bilstm_input_dim 100 --bilstm_hidden_dim 200 --attention_hidden_dim 50 --words_file ../embs/sskip.100.vectors --pretrained_dim 100 --action_dim 40 --train --use_pos --unk_strategy (--fast)
 
-To train a model with the proposed deterministic attention technique, use the option --fast. 
+To train a model with the proposed deterministic attention technique, use the option ``--fast``. 
 
 ### Greedy Decoding
 
@@ -34,7 +34,17 @@ To train a model with the proposed deterministic attention technique, use the op
 
 ### Citation
 
-To appear in ACL 2020.
+    @inproceedings{fernandez-gonzalez-gomez-rodriguez-2020-enriched,
+    title = "Enriched In-Order Linearization for Faster Sequence-to-Sequence Constituent Parsing",
+    author = "Fern{\'a}ndez-Gonz{\'a}lez, Daniel  and
+      G{\'o}mez-Rodr{\'\i}guez, Carlos",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.376",
+    pages = "4092--4099"}
 
 ### Acknowledgments
 
